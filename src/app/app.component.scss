@@ -1,0 +1,97 @@
+$light-gray: #DED5EA;
+$semi-gray: #A79EB2;
+$pearl-pink: #ae9eb3;
+$color-green: #005B42;
+$semi-black: #222123;
+
+$shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+$shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+
+$bp-largest: 75em;     // 1200px
+$bp-large: 68.75em;    // 1100px
+$bp-medium: 56.25em;   // 900px
+$bp-small: 37.5em;     // 600px
+$bp-smallest: 31.25em; // 500px
+
+.header {
+    font-size: 1.4rem;
+    height: 6rem;
+    background-color: $semi-black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 18%;
+}
+    @media only screen and (max-width: 31.25em) {
+      .header {
+        flex-wrap: wrap;
+        align-content: space-around;
+        height: 11rem;
+    }
+}
+
+.navbar {
+    padding: 3rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    li a {
+        background-color: $semi-black;
+        text-decoration: none;
+        color: white;
+        font-size: 2rem;
+        padding: 1.25rem;
+        display: block;
+    }
+
+    li a img {
+        border-radius: 50%;
+        height: 2.5rem;
+        width: auto;
+    }
+
+    li:hover a {
+        background-color: $color-green;}
+
+    ul li ul li:hover a {
+        background-color: #008963;}
+
+    li {
+        float: left;}
+
+    ul li ul li {
+        float: inherit;}
+
+    ul li ul li a{
+        padding-right: 0;}
+
+    li ul {
+        display: none;
+        position: absolute;}
+
+    li:hover > ul {
+        display: block; }
+
+    ul, ol {
+        list-style: none;}
+}
+
+.cuenta-logo {
+    border-radius: none;
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-right: 1rem;
+}
+
+.logo {
+    height: 5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    background-color: white;
+    cursor: pointer;
+}
