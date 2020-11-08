@@ -2,7 +2,11 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { DndComponent } from './dnd/dnd.component';
+import { AppComponent } from './app.component';
 
 const appRoutes: Routes = [
-    {  path: '' , component: DndComponent}
+    { path: 'dnd', component: DndComponent }
 ];
+
+export const appRoutingProviders: any[] = [];
+export const routing: ModuleWithProviders<any> = RouterModule.forRoot(appRoutes);

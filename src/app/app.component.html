@@ -1,8 +1,8 @@
 <header class="header">
-  <img class="logo" src="../assets/asistencias-ico.png" alt="Asistencia Logo">
+  <img class="logo" [routerLink]="['/']" src="../assets/asistencias-ico.png" alt="Asistencia Logo">
   <nav class="navbar">
     <ul>
-        <li><a routerLink="/dnd">Inicio</a></li>
+        <li><a [routerLink]="['/']">Inicio</a></li>
         <li><a href="">Cursos</a>
           <ul>
             <li><a href="">Registrar</a></li>
@@ -10,8 +10,8 @@
             <li><a href="">Eliminar</a></li>
           </ul>
         </li>
-        <li><a href="">Lista de asistencia</a></li>
-        <li><a href=""><img src="../assets/user-placeholder.png"> Iniciar sesión</a></li>
+        <li><a [routerLink]="['/dnd']">Lista de asistencia</a></li>
+        <li><a href=""><img src="../assets/user-placeholder.png"> Gilberto Borrego</a></li>
     </ul>
   </nav>
 </header>
