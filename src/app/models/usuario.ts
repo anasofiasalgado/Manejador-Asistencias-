@@ -6,5 +6,9 @@ var usuarioSchema = new Schema({
     contraseña: Number
 });
 
+<<<<<<< HEAD
 module.exports = mongoose.model('Usuario', usuarioSchema);
 //fdpoff
+=======
+module.exports = mongoose.model('Usuario', usuarioSchema);
+>>>>>>> master
