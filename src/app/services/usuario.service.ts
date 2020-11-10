@@ -8,34 +8,31 @@ const baseUrl = global.url;
 @Injectable({
     providedIn: 'root'
 })
-export class CursosService {
-    constructor(private _http: HttpClient) {}
+export class UsuariosService {
 
-    getAllCursos(): Observable<any> {
+    constructor(private _http: HttpClient) {}
+    
+    getAllUsuarios(): Observable<any> {
         return this._http.get(baseUrl);
     }
 
-    getCurso(id): Observable<any> {
+    getUsuario(id): Observable<any> {
         return this._http.get(`${baseUrl}/${id}`);
     }
 
-    createCurso(data): Observable<any> {
+    createUsuario(data): Observable<any> {
         return this._http.post(baseUrl, data);
     }
 
-    updateCurso(id, data): Observable<any> {
+    updateUsuario(id, data): Observable<any> {
         return this._http.put(`${baseUrl}/${id}`, data);
     }
 
-    deleteCurso(id): Observable<any> {
+    deleteUsuario(id): Observable<any> {
         return this._http.delete(`${baseUrl}/${id}`);
     }
 
-    deleteAllCursos(): Observable<any> {
+    deleteAllUsuarios(): Observable<any> {
         return this._http.delete(baseUrl);
-    }
-
-    findByNombre(nombre): Observable<any> {
-        return this._http.get(`${baseUrl}?nombre=${nombre}`);
     }
 }
