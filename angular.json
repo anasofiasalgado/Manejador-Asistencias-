@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "Asistencias5000"
+  "defaultProject": "Asistencias5000",
+  "cli": {
+    "analytics": "a35c5bec-dc31-476f-b682-1310cf7e632c"
+  }
 }
