@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var Cursos = mongoose.model('Curso');
+var Sesion = mongoose.model('Sesion');
 
 var grupoSchema = new Schema({
-    nombre: String,    
-    curso: {type: Schema.ObjectId, ref: "Curso"}
+    nombre: String,
+    sesion: {type: Schema.ObjectId, ref: "Sesion"}
 });
 
 module.exports = mongoose.model('Grupo', grupoSchema);
