@@ -9,6 +9,7 @@ import { ProgressComponent } from './progress/progress.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { ListAsistComponent } from './list-asist/list-asist.component';
+import { PopupCourseComponent } from './CursosPopUp/popup-course/popup-course.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ListAsistComponent } from './list-asist/list-asist.component';
     DndComponent,
     ProgressComponent,
     ListAsistComponent,
+    PopupCourseComponent,
   ],
   imports: [
     BrowserModule,
