@@ -4,19 +4,16 @@ import { routing, appRoutingProviders } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
+import { MatTableModule } from '@angular/material/table';
+
 import { AppComponent } from './app.component';
 import { DndDirective } from './asistencias5000.directive';
 import { DndComponent } from './dnd/dnd.component';
 import { ProgressComponent } from './progress/progress.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button'; 
-import { MatDialogModule } from '@angular/material/dialog'; 
-import { MatTableModule } from '@angular/material/table';
-import { ListAsistComponent } from './list-asist/list-asist.component';
-import { Observable } from 'rxjs';
-import { ConfirmDialogComponent } from './components/shared/confirm-dialog/confirm-dialog.component';
 
 import { DataTablesModule } from 'angular-datatables';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CursostableComponent } from './cursostable/cursostable.component';
 
 @NgModule({
   declarations: [
@@ -24,17 +21,17 @@ import { DataTablesModule } from 'angular-datatables';
     DndDirective,
     DndComponent,
     ProgressComponent,
-    ListAsistComponent,
+    CursostableComponent
   ],
   imports: [
     BrowserModule,
     routing,
-    BrowserAnimationsModule,
+    DataTablesModule,
     MatTableModule,
-    MatDialogModule,
-    MatButtonModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  entryComponents:[ConfirmDialogComponent],
+  entryComponents:[],
   providers: [
     appRoutingProviders
   ],

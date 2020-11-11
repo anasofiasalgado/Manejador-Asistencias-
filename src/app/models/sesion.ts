@@ -1,11 +1,17 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+export class Sesion {
 
-var sesionSchema = new Schema({
-    nombreAlumno: String,    
-    fecha: Date,
-    asistencia: Boolean,
-    unidadC: Number
-});
+    _id: string;
+    nombreAlumno: string;
+    fecha: Date;
+    asistencia: boolean;
+    unidadC: number;
 
-module.exports = mongoose.model('Sesion', sesionSchema);
+    constructor(_id='', nombreAlumno='', fecha= Date, asistencia=false,
+        unidadC=0) {
+        
+        this._id = _id;
+        this.nombreAlumno = nombreAlumno;
+        this. fecha = new Date();
+        this.unidadC = unidadC;
+    }
+}

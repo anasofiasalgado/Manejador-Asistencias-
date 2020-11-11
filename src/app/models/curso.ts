@@ -1,13 +1,18 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
-var Usuario = mongoose.model('Usuario');
-var Grupo = mongoose.model('Grupo');
+export class Curso {
 
-var cursoSchema = new Schema({
-    nombre: String,
-    unidades: Number,
-    usuario: {type: Schema.ObjectId, ref: "Usuario"},
-    grupo: {type: Schema.ObjectId, ref: "Grupo"}
-});
+    _id: string;
+    nombre: string;
+    unidades: number;
+    grupos: {};
+    usuario: {};
 
-module.exports = mongoose.model("Curso", cursoSchema);
+    constructor(_id='', nombre='', unidades=5, 
+        grupos={}, usuario={}) {
+            
+        this._id = _id;
+        this.nombre = nombre;
+        this.unidades = unidades;
+        this.grupos = grupos;
+        this.usuario = usuario;
+    }
+}

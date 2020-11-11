@@ -1,34 +1,37 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CursosService } from '../services/curso.service';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-cursostable',
   templateUrl: './cursostable.component.html',
-  styleUrls: ['./cursostable.component.scss']
+  styleUrls: ['./cursostable.component.scss'],
+  providers: [CursosService]
 })
-export class CursostableComponent implements OnInit, OnDestroy {
-  
-  public cursos: Array<String>;
-  dtOptions: DataTables.Settings = {};
-  data: any;
+export class CursostableComponent implements OnInit {
 
-  constructor() { 
-    this.cursos = new Array();
-    this.dtOptions = {
-      pagingType: 'full_numbers',
-      pageLength: 5
-    };
+  dtOptions: DataTables.Settings = {};
+  dtTrigger: Subject<any> = new Subject();
+  persons: String[] = [];
+
+  constructor(
+    private cursosService: CursosService
+    ) {
+
   }
 
   ngOnInit(): void {
-    this.cursos.push("Agiles");
-    this.cursos.push("Web");
-    this.cursos.push("Prototipos");
-    this.cursos.push("Vida saludable");
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      pageLength: 3
+    };
+
+    this._http.get('')
+      .subscribe(() => {});
   }
 
   ngOnDestroy(): void {
-
+    this.dtTrigger.unsubscribe();
   }
 
 }

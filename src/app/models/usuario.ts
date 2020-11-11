@@ -1,9 +1,12 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+export class Usuario {
 
-var usuarioSchema = new Schema({
-    correo: String,
-    contraseña: Number
-});
+    _id: string;
+    correo: string;
+    contrasena: string;
 
-module.exports = mongoose.model('Usuario', usuarioSchema);
+    constructor(_id='', correo='', contrasena='') {
+        this._id = _id;
+        this.correo = correo;
+        this.contrasena = contrasena;
+    }
+}
