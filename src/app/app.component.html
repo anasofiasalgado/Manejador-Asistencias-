@@ -1,18 +1,16 @@
-<header class="header">
-  <img class="logo" [routerLink]="['/']" src="../assets/asistencias-ico.png" alt="Asistencia Logo">
-  <nav class="navbar">
-    <ul>
-        <li><a [routerLink]="['/']">Inicio</a></li>
-        <li><a href="">Cursos</a>
-          <ul>
-            <li><a href="">Registrar</a></li>
-            <li><a href="">Editar</a></li>
-            <li><a href="">Eliminar</a></li>
-          </ul>
-        </li>
-        <li><a [routerLink]="['/dnd']">Lista de asistencia</a></li>
-        <li><a href=""><img src="../assets/user-placeholder.png"> Gilberto Borrego</a></li>
-    </ul>
-  </nav>
-</header>
+<nav class="navbar">
+  <div class="logo"><img [routerLink]="['/']" src="../assets/asistencias-ico.png" alt="Asistencia Logo"></div>
+  <ul>
+    <li><a [routerLink]="['/']">Inicio</a></li>
+    <li><a>Cursos</a>
+      <ul>
+        <li><a [routerLink]="['addcourse']">Registrar</a></li>
+        <li><a [routerLink]="['']">Editar</a></li>
+        <li><a [routerLink]="['']">Eliminar</a></li>
+      </ul>
+    </li>
+     <li><a [routerLink]="['/dnd']">Lista de asistencia</a></li>
+    <li><a href=""><img src="../assets/user-placeholder.png"> Gilberto Borrego</a></li>
+  </ul>
+</nav>
 <router-outlet></router-outlet>

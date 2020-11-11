@@ -1,0 +1,19 @@
+<div class="cursos-container">
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" 
+    class="table table-striped tabled-bordered row-border row-border hover">
+        <thead>
+            <tr>
+                <th>Nombre del curso</th>
+                <th>Unidades</th>
+                <th>Grupo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let curso of cursos">
+                <td>{{ curso }}</td>
+                <td>{{ curso }}</td>
+                <td>{{ curso }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
