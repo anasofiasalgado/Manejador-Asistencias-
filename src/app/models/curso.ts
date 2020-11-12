@@ -1,18 +1,12 @@
+import { Grupo } from './grupo';
+import { Usuario } from './usuario';
+
 export class Curso {
-
-    _id: string;
-    nombre: string;
-    unidades: number;
-    grupos: {};
-    usuario: {};
-
-    constructor(_id='', nombre='', unidades=5, 
-        grupos={}, usuario={}) {
-            
-        this._id = _id;
-        this.nombre = nombre;
-        this.unidades = unidades;
-        this.grupos = grupos;
-        this.usuario = usuario;
-    }
+    constructor(
+        public _id: string,
+        public nombre: string,
+        public unidades: number,
+        public grupos: Grupo[],
+        public usuario: Usuario[]
+    ) {}
 }

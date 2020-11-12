@@ -14,6 +14,9 @@ import { ProgressComponent } from './progress/progress.component';
 import { DataTablesModule } from 'angular-datatables';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CursostableComponent } from './cursostable/cursostable.component';
+import { CursosComponent } from './cursos/cursos.component';
+import { CursocComponent } from './cursoc/cursoc.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { CursostableComponent } from './cursostable/cursostable.component';
     DndDirective,
     DndComponent,
     ProgressComponent,
-    CursostableComponent
+    CursostableComponent,
+    CursosComponent,
+    CursocComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +35,8 @@ import { CursostableComponent } from './cursostable/cursostable.component';
     DataTablesModule,
     MatTableModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   entryComponents:[],
   providers: [

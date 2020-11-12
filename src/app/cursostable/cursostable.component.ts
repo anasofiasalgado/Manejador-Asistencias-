@@ -26,8 +26,7 @@ export class CursostableComponent implements OnInit {
       pageLength: 3
     };
 
-    this._http.get('')
-      .subscribe(() => {});
+    
   }
 
   ngOnDestroy(): void {

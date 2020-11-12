@@ -99,12 +99,12 @@ $bp-smallest: 31.25em; // 500px
 }
 
 .navbar ul ul li a {
-    line-height: 8rem;
+    line-height: 5rem;
 }
 
 @media only screen and (max-width: $bp-medium) {
     .navbar ul ul li a {
-        line-height: 5rem;
+        line-height: 3rem;
     }
 }
 

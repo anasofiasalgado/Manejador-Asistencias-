@@ -1,0 +1,18 @@
+<div class="form-container">
+    <h2>{{ title }}</h2>
+
+    <form #cursosForm="ngForm" (ngSubmit)="onSubmit(cursosForm)">
+        <p>
+            <label for="nombre">Nombre del curso</label>
+            <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="curso.nombre" placeholder="Ingresa el nombre del curso">
+        </p>
+
+        <p>
+            <label for="unidades">Unidades</label>
+            <input type="number" name="unidades" #unidades="ngModel" [(ngModel)]="curso.unidades" min=1 max=6 value=1>
+        </p>
+
+        <input type="button" value="Cancelar">
+        <input type="submit" value="Registrar">
+    </form>
+</div>

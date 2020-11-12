@@ -1,12 +1,10 @@
+import { Sesion } from './sesion';
+
 export class Grupo {
 
-    _id: string;
-    nombre: string;
-    sesiones: {};
-
-    constructor(_id='', nombre='', sesiones={}) {
-        this._id = _id;
-        this.nombre = nombre;
-        this.sesiones = sesiones;
-    }
+    constructor(
+        public _id: string,
+        public nombre: string,
+        public sesiones: Sesion[]
+    ) {}
 }
