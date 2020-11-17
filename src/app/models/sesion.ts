@@ -1,3 +1,5 @@
+import { Grupo } from './grupo';
+
 export class Sesion {
 
     constructor(
@@ -5,6 +7,7 @@ export class Sesion {
         public nombreAlumno: string,
         public fecha: Date,
         public asistencia: boolean,
-        public unidadC: number
+        public unidadC: number,
+        public grupo: Grupo
     ) {}
 }

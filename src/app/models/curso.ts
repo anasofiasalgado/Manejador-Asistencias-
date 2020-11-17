@@ -6,7 +6,7 @@ export class Curso {
         public _id: string,
         public nombre: string,
         public unidades: number,
-        public grupos: Grupo[],
-        public usuario: Usuario[]
+        public grupos: Grupo[] = [],
+        public usuario: string
     ) {}
 }

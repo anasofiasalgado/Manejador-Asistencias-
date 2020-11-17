@@ -10,9 +10,10 @@ export class CursosComponent implements OnInit {
 
   constructor(
     private router: Router
-  ) { }
+  ) {}
 
   ngOnInit(): void {
+    
   }
 
   registrarCurso = function () {

@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CursosService } from '../services/curso.service';
 import { Subject } from 'rxjs';
+import { Curso } from '../models/curso';
 
 @Component({
   selector: 'app-cursostable',
@@ -12,11 +13,11 @@ export class CursostableComponent implements OnInit {
 
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject();
-  persons: String[] = [];
+  public cursos: Curso[];
 
   constructor(
-    private cursosService: CursosService
-    ) {
+    private _cursosService: CursosService
+  ) {
 
   }
 
@@ -26,7 +27,23 @@ export class CursostableComponent implements OnInit {
       pageLength: 3
     };
 
-    
+    this.getCursos();
+  }
+
+  getCursos() {
+    this._cursosService.getAllCursos().subscribe(
+      response => {
+        if (response.cursos) {
+          console.log(response);
+          this.cursos = response.cursos;
+        }
+
+        this.dtTrigger.next();
+      },
+      err => {
+        console.log(<any>err);
+      }
+    );
   }
 
   ngOnDestroy(): void {

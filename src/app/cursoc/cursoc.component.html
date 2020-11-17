@@ -1,18 +1,31 @@
+<input class="botonsin" type="button" value="CURSOS" [routerLink]="['/vista-cursos']">
 <div class="form-container">
     <h2>{{ title }}</h2>
+
+    <div class="msg-success" *ngIf="status == 'success'">
+        El Curso se ha creado correctamente
+    </div>
+
+    <div class="msg-failer" *ngIf="status == 'failed'">
+        El Curso no se ha podido crear
+    </div>
 
     <form #cursosForm="ngForm" (ngSubmit)="onSubmit(cursosForm)">
         <p>
             <label for="nombre">Nombre del curso</label>
-            <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="curso.nombre" placeholder="Ingresa el nombre del curso">
+            <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="curso.nombre" 
+                placeholder="Ingresa el nombre del curso" required>
+            <span *ngIf="nombre.touched && !nombre.valid">
+                Campo obligatorio *
+            </span>
         </p>
 
         <p>
             <label for="unidades">Unidades</label>
-            <input type="number" name="unidades" #unidades="ngModel" [(ngModel)]="curso.unidades" min=1 max=6 value=1>
+            <input type="number" name="unidades" #unidades="ngModel" [(ngModel)]="curso.unidades" min=1 max=5 value=1>
         </p>
 
-        <input type="button" value="Cancelar">
-        <input type="submit" value="Registrar">
+        <input type="button" value="Cancelar" [routerLink]="['/vista-cursos']">
+        <input type="submit" value="Registrar" [disabled]="!cursosForm.form.valid">
     </form>
 </div>
