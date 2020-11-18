@@ -2,13 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { global } from './global';
-import { Grupo } from '../models/grupo';
-
+import { Curso } from '../models/curso';
 
 @Injectable({
     providedIn: 'root'
 })
-export class GruposService {
+export class CursosService {
     public baseUrl: string;
 
     constructor(
@@ -16,33 +15,33 @@ export class GruposService {
     ) {
         this.baseUrl = global.url;
     }
-    
-    getAllGrupos(): Observable<any> {
-        var headers = new HttpHeaders().set('Content-type', 'application/json');
-        return this._http.get(this.baseUrl + '/grupos', {headers: headers});
-    }
-  
 
-    getGrupo(id): Observable<any> {
+    getAllCursos(): Observable<any> {
+        var headers = new HttpHeaders().set('Content-type', 'application/json');
+
+        return this._http.get(this.baseUrl + '/cursos', {headers: headers});
+    }
+
+    getCurso(id): Observable<any> {
         return this._http.get(`${this.baseUrl}/${id}`);
     }
 
-    createGrupo(grupo: Grupo): Observable<any> {
-        var params = JSON.stringify(grupo);
+    createCurso(curso: Curso): Observable<any> {
+        var params = JSON.stringify(curso);
         var headers = new HttpHeaders().set('Content-type', 'application/json');
 
-        return this._http.post(this.baseUrl + '/grupos', params, {headers: headers});    
+        return this._http.post(this.baseUrl + '/cursos', params, {headers: headers});
     }
 
-    updateGrupo(id, data): Observable<any> {
+    updateCurso(id, data): Observable<any> {
         return this._http.put(`${this.baseUrl}/${id}`, data);
     }
 
-    deleteGrupo(id): Observable<any> {
+    deleteCurso(id): Observable<any> {
         return this._http.delete(`${this.baseUrl}/${id}`);
     }
 
-    deleteAllGrupos(): Observable<any> {
+    deleteAllCursos(): Observable<any> {
         return this._http.delete(this.baseUrl);
     }
 

@@ -17,6 +17,9 @@ import { CursostableComponent } from './cursostable/cursostable.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { CursocComponent } from './cursoc/cursoc.component';
 import { HomeComponent } from './home/home.component';
+import { GruposComponent } from './grupos/grupos.component';
+import { GrupostableComponent } from './grupostable/grupostable.component';
+import { GruposgComponent } from './gruposg/gruposg.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { HomeComponent } from './home/home.component';
     CursostableComponent,
     CursosComponent,
     CursocComponent,
-    HomeComponent
+    HomeComponent,
+    GruposComponent,
+    GrupostableComponent,
+    GruposgComponent
   ],
   imports: [
     BrowserModule,
