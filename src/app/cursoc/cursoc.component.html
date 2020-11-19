@@ -6,8 +6,12 @@
         El Curso se ha creado correctamente
     </div>
 
-    <div class="msg-failer" *ngIf="status == 'failed'">
+    <div class="msg-failed" *ngIf="status == 'failed'">
         El Curso no se ha podido crear
+    </div>
+
+    <div class="msg-failed" *ngIf="status == 'existing'">
+        El Curso ingresado ya existe
     </div>
 
     <form #cursosForm="ngForm" (ngSubmit)="onSubmit(cursosForm)">

@@ -17,7 +17,7 @@ export class GruposComponent implements OnInit {
     
   }
 
-  registrarGrupos = function () {
+  registrarGrupo = function () {
     this.router.navigateByUrl('/gruposg');
   };
 

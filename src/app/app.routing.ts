@@ -17,7 +17,7 @@ const appRoutes: Routes = [
     { path: 'dnd', component: DndComponent },
     { path: 'vista-cursos', component: CursosComponent },
     { path: 'cursoc', component: CursocComponent },
-    { path: 'grupos', component: GruposComponent }, 
+    { path: 'vista-grupos', component: GruposComponent }, 
     { path: 'gruposg', component: GruposgComponent }, 
     { path: 'grupos-table', component: GrupostableComponent }
 ];

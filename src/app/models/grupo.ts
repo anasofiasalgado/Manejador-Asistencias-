@@ -6,7 +6,7 @@ export class Grupo {
     constructor(
         public _id: string,
         public nombre: string,
-        public curso: Curso,
+        public curso: string,
         public sesiones: Sesion[]
     ) {}
 }

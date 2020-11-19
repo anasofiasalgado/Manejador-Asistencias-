@@ -17,21 +17,21 @@ export class GrupostableComponent implements OnInit {
   public grupos: Grupo[];
 
   constructor(
-    private grupServ: GruposService) {
+    private _gruposService: GruposService) {
 
   }
 
   ngOnInit(): void {
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 3
+      pageLength: 5
     };
     this.getGrupos(); 
 
   }
 
   getGrupos() {
-    this.grupServ.getAllGrupos().subscribe(
+    this._gruposService.getAllGrupos().subscribe(
       response => {
         if (response.grupos) {
           console.log(response);

@@ -24,7 +24,7 @@ export class CursostableComponent implements OnInit {
   ngOnInit(): void {
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 3
+      pageLength: 5
     };
 
     this.getCursos();

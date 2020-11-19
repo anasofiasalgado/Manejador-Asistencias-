@@ -19,9 +19,9 @@ export class GruposService {
     
     getAllGrupos(): Observable<any> {
         var headers = new HttpHeaders().set('Content-type', 'application/json');
+
         return this._http.get(this.baseUrl + '/grupos', {headers: headers});
     }
-  
 
     getGrupo(id): Observable<any> {
         return this._http.get(`${this.baseUrl}/${id}`);
