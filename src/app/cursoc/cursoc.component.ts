@@ -45,6 +45,10 @@ export class CursocComponent implements OnInit {
     );
   }
 
+  deleteCursos(){
+    this._cursosService.deleteAllCursos().subscribe(()=> this.status = 'Delete successful'); 
+  }
+
   onSubmit(form) {
     console.log(this.curso);
 

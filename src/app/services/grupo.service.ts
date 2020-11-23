@@ -23,8 +23,8 @@ export class GruposService {
         return this._http.get(this.baseUrl + '/grupos', {headers: headers});
     }
 
-    getGrupo(id): Observable<any> {
-        return this._http.get(`${this.baseUrl}/${id}`);
+    getGrupo(name): Observable<any> {
+        return this._http.get(`${this.baseUrl}/${name}`);
     }
 
     createGrupo(grupo: Grupo): Observable<any> {
@@ -34,19 +34,19 @@ export class GruposService {
         return this._http.post(this.baseUrl + '/grupos', params, {headers: headers});    
     }
 
-    updateGrupo(id, data): Observable<any> {
-        return this._http.put(`${this.baseUrl}/${id}`, data);
+    updateGrupo(name, data): Observable<any> {
+        return this._http.put(`${this.baseUrl}/${name}`, data);
     }
 
-    deleteGrupo(id): Observable<any> {
-        return this._http.delete(`${this.baseUrl}/${id}`);
+    deleteGrupo(name): Observable<any> {
+        return this._http.delete(`${this.baseUrl}/${name}`);
     }
 
     deleteAllGrupos(): Observable<any> {
         return this._http.delete(this.baseUrl);
     }
 
-    findByNombre(nombre): Observable<any> {
-        return this._http.get(`${this.baseUrl}?nombre=${nombre}`);
+    findByNombre(name): Observable<any> {
+        return this._http.get(`${this.baseUrl}?nombre=${name}`);
     }
 }
