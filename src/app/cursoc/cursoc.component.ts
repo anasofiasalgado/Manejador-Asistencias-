@@ -45,10 +45,8 @@ export class CursocComponent implements OnInit {
     );
   }
 
- /* deleteCursos() {
-    this._cursosService.deleteAllCursos().subscribe(() => this.status = 'Delete successful');
-  }
-*/
+ 
+
   /*updateCursos(){
     this._cursosService.updateCurso(this.nombre, this.cursos)
       .subscribe(data => {

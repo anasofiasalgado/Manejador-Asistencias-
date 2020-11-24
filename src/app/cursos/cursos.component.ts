@@ -20,4 +20,20 @@ export class CursosComponent implements OnInit {
     this.router.navigateByUrl('/cursoc');
   };
 
+
+  /*updateCursos(){
+    this._cursosService.updateCurso(this.nombre, this.cursos)
+      .subscribe(data => {
+        console.log(data);
+        this.curso = new Curso();
+        this.gotoList();
+      }, error => console.log(error));
+  }
+*/
+
+  /*gotoList() {
+    this.router.navigate(['/cursoc']);
+  }
+*/
+
 }
