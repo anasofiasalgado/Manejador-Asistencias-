@@ -46,6 +46,9 @@ export class CursostableComponent implements OnInit {
     );
   }
 
+  
+
+
   ngOnDestroy(): void {
     this.dtTrigger.unsubscribe();
   }

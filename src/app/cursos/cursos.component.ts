@@ -25,7 +25,7 @@ export class CursosComponent implements OnInit {
     this.cursos = this.cursosService.getAllCursos(); 
   }
 
-  deleteEmployee(nombre: string) {
+  eliminarCurso(nombre: string) {
     this.cursosService.deleteCurso(nombre)
       .subscribe(
         data => {

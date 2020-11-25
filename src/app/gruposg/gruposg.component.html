@@ -14,7 +14,7 @@
         El Grupo ingresado ya existe
     </div>
 
-    <form #gruposForm="ngForm" (ngSubmit)="onSubmit(gruposForm)">
+<form #gruposForm="ngForm" (ngSubmit)="onSubmit(gruposForm)">
         <p>
             <label for="nombre">Nombre del grupo</label>
             <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="grupo.nombre"

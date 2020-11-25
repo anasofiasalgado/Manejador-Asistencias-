@@ -8,42 +8,18 @@ import { Subject } from 'rxjs';
   selector: 'app-grupostable',
   templateUrl: './grupostable.component.html',
   styleUrls: ['./grupostable.component.scss'],
-  //providers: [GruposService]
+  //providers: [GrupoService]
 })
 export class GrupostableComponent implements OnInit {
 
-  dtOptions: DataTables.Settings = {};
-  dtTrigger: Subject<any> = new Subject();
-  //public grupos: Grupo[];
 
-  constructor(
-   // private _gruposService: GruposService) 
-   ){}
+  constructor(){}
   
 
   ngOnInit(): void {
-   /* this.dtOptions = {
-      pagingType: 'full_numbers',
-      pageLength: 5
-    };
-    this.getGrupos(); 
-*/
+   
   }
 
-  /*getGrupos() {
-    this._gruposService.getAllGrupos().subscribe(
-      response => {
-        if (response.grupos) {
-          console.log(response);
-          this.grupos = response.grupos;
-        }
-
-        this.dtTrigger.next();
-      },
-      err => {
-        console.log(<any>err);
-      }
-    );
-  }
-*/
 }
+
+
