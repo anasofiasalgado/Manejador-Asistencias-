@@ -1,13 +1,12 @@
-import { Grupo } from './grupo';
+//import { Grupo } from './grupo';
 
 export class Sesion {
 
     constructor(
-        public _id: string,
         public nombreAlumno: string,
-        public fecha: Date,
-        public asistencia: boolean,
-        public unidadC: number,
-        public grupo: Grupo
+        public asistencia: [Date[], boolean[]],
+        public unidadC: number, 
+        public grupo: String,
+        public curso: String
     ) {}
 }
