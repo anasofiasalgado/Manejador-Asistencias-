@@ -1,6 +1,6 @@
 <input class="botonsin" type="button" value="GRUPOS" [routerLink]="['/vista-grupos']">
 <div class="form-container">
-    <h2>{{ title }}</h2>
+    <h2>Grupos</h2>
 
     <div class="msg-success" *ngIf="status == 'success'">
         El Grupo se ha creado correctamente
@@ -14,7 +14,7 @@
         El Grupo ingresado ya existe
     </div>
 
-<form #gruposForm="ngForm" (ngSubmit)="onSubmit(gruposForm)">
+<!--<form #gruposForm="ngForm" (ngSubmit)="onSubmit(gruposForm)">
         <p>
             <label for="nombre">Nombre del grupo</label>
             <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="grupo.nombre"
@@ -31,9 +31,9 @@
                 <option disabled hidden value="" selected>Selecciona una opción</option>
                 <option *ngFor="let cursito of cursos" value="{{ cursito.nombre }}">{{ cursito.nombre }}</option>
             </select>
-        </p>
+        
 
         <input type="button" value="Cancelar" [routerLink]="['/vista-grupos']">
         <input type="submit" value="Registrar" [disabled]="!gruposForm.form.valid">
-    </form>
+    </form></p>-->
 </div>

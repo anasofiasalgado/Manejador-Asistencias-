@@ -5,7 +5,8 @@ export class Curso {
     constructor(
         public nombre: string,
         public unidades: number,
-        public grupos: String [] = [],
-        public cursos: Usuario 
-    ) {}
+        public usuario: string,
+        public grupos: String[] = []
+
+    ) { }
 }

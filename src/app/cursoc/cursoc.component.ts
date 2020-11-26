@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Curso } from '../models/curso';
 import { Usuario } from '../models/usuario';
-import { Grupo } from '../models/grupo';
 import { CursosService } from '../services/curso.service';
 import { HttpHeaders } from '@angular/common/http';
 
@@ -21,7 +20,7 @@ export class CursocComponent implements OnInit {
   constructor(
     private _cursosService: CursosService
   ) {
-    this.curso = new Curso('', '', 5, [], '');
+    this.curso = new Curso('',0,'',[]);
   }
 
   ngOnInit(): void {
@@ -45,7 +44,6 @@ export class CursocComponent implements OnInit {
     );
   }
 
- 
 
   /*updateCursos(){
     this._cursosService.updateCurso(this.nombre, this.cursos)

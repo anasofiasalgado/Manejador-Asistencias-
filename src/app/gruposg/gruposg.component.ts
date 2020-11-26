@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-//import { Grupo } from '../models/grupo';
-//import { GruposService } from '../services/grupo.service';
 import { HttpHeaders } from '@angular/common/http';
 import { Curso } from '../models/curso';
 import { CursosService } from '../services/curso.service';
@@ -9,26 +7,19 @@ import { CursosService } from '../services/curso.service';
   selector: 'app-gruposg',
   templateUrl: './gruposg.component.html',
   styleUrls: ['./gruposg.component.scss'],
-  //providers: [GruposService]
 })
 export class GruposgComponent implements OnInit {
 
-  public title: string;
- // public grupo: Grupo;
   public status: string;
   public cursos: Curso[];
- // public grupos: Grupo[];
 
   constructor(
-   // private _grupoService: GruposService,
     private _cursosService: CursosService
   ) {
- //   this.grupo = new Grupo('', '', '', []);
   }
 
   ngOnInit(): void {
     this.getCursos();
-    //this.getGrupos();
   }
 
   /*
@@ -47,9 +38,6 @@ export class GruposgComponent implements OnInit {
     );
   }
   onSubmit(form) {
-   // console.log(this.grupo);
-
-   
-
 }
+
 }
