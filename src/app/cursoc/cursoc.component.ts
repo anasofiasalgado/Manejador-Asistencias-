@@ -3,6 +3,7 @@ import { Curso } from '../models/curso';
 import { Usuario } from '../models/usuario';
 import { CursosService } from '../services/curso.service';
 import { HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cursoc',
@@ -18,7 +19,8 @@ export class CursocComponent implements OnInit {
   public cursos: Curso[];
 
   constructor(
-    private _cursosService: CursosService
+    private _cursosService: CursosService,
+    private router: Router
   ) {
     this.curso = new Curso('',0,'',[]);
   }
@@ -96,12 +98,14 @@ onSubmit(form) {
         }
         console.log(response);
         form.reset();
+        this.router.navigate(['/vista-cursos']);
       },
       error => {
         console.log(<any>error);
       }
     );
   }
+  this.status = "existing";
 }
 
 }

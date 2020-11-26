@@ -18,7 +18,7 @@
         <p>
             <label for="nombre">Nombre del curso</label>
             <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="curso.nombre" 
-                placeholder="Ingresa el nombre del curso" required>
+                placeholder="Ingresa el nombre del curso" maxlength="25" required>
             <span *ngIf="nombre.touched && !nombre.valid">
                 Campo obligatorio *
             </span>
@@ -26,7 +26,10 @@
 
         <p>
             <label for="unidades">Unidades</label>
-            <input type="number" name="unidades" #unidades="ngModel" [(ngModel)]="curso.unidades" min=1 max=5 value=1>
+            <input type="number" name="unidades" #unidades="ngModel" [(ngModel)]="curso.unidades" min=1 max=5 value="5" required>
+            <span *ngIf="unidades.touched && !unidades.valid">
+                Campo obligatorio *
+            </span>
         </p>
 
         <input type="button" value="Cancelar" [routerLink]="['/vista-cursos']">

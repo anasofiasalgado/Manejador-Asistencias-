@@ -34,7 +34,6 @@ export class CursostableComponent implements OnInit {
     this._cursosService.getAllCursos().subscribe(
       response => {
         if (response.cursos) {
-          console.log(response);
           this.cursos = response.cursos;
         }
 
@@ -46,7 +45,20 @@ export class CursostableComponent implements OnInit {
     );
   }
 
-  
+  deleteCurso(id) {
+    this._cursosService.deleteCurso(id).subscribe(
+      response => {
+        if (response.cursos) {
+          this.cursos = response.cursos;
+        }
+        this.ngOnDestroy();
+      },
+      err => {
+        console.log(<any>err);
+      }
+    );
+    this.ngOnInit();
+  }
 
 
   ngOnDestroy(): void {
